@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using GildedRose.Api.Extensions;
+using GildedRose.BusinessLogic.Interfaces.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace GildedRose.Api
 {
@@ -20,14 +16,18 @@ namespace GildedRose.Api
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.ConfigureDatabaseConnections(Configuration);
+            services.ConfigureDependencyInjection();
+            services.ConfigureAutoMapperProfiles();
+            services.ConfigureCors();
+            services.ConfigureAuthentication(Configuration);
+            services.AddAuthorization().AddMvcCore(options => options.RespectBrowserAcceptHeader = true).AddJsonFormatters();
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -35,7 +35,11 @@ namespace GildedRose.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
             app.UseMvc();
+            app.UseCors("AllowAllOrigin");
+            var addFakeDataService = app.ApplicationServices.GetService<IAddFakeDataService>();
+            addFakeDataService.AddFakeData();
         }
     }
 }

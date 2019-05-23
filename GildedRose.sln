@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRose.Api", "GildedRose.Api\GildedRose.Api.csproj", "{66CAF6CB-E1B2-4B42-A585-01B762739CA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GildedRose.Api", "GildedRose.Api\GildedRose.Api.csproj", "{66CAF6CB-E1B2-4B42-A585-01B762739CA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GildedRose.BusinessLogic", "GildedRose.BusinessLogic\GildedRose.BusinessLogic.csproj", "{0BA351DD-436B-4689-A61F-09A0D549F621}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GildedRose.DataAccess", "GildedRose.DataAccess\GildedRose.DataAccess.csproj", "{A4E6471A-EA13-4C37-A710-58EB325D22CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GildedRose.BusinessLogic.Tests", "GildedRose.Tests\GildedRose.BusinessLogic.Tests.csproj", "{AF3C6C75-8E43-47B4-9498-7A0D34AF8C44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GildedRose.Api.Tests", "GildedRose.Api.Tests\GildedRose.Api.Tests.csproj", "{569FC2CD-2BAC-4143-84B6-D819D9583355}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{66CAF6CB-E1B2-4B42-A585-01B762739CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CAF6CB-E1B2-4B42-A585-01B762739CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CAF6CB-E1B2-4B42-A585-01B762739CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BA351DD-436B-4689-A61F-09A0D549F621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA351DD-436B-4689-A61F-09A0D549F621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA351DD-436B-4689-A61F-09A0D549F621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA351DD-436B-4689-A61F-09A0D549F621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E6471A-EA13-4C37-A710-58EB325D22CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E6471A-EA13-4C37-A710-58EB325D22CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E6471A-EA13-4C37-A710-58EB325D22CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E6471A-EA13-4C37-A710-58EB325D22CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF3C6C75-8E43-47B4-9498-7A0D34AF8C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3C6C75-8E43-47B4-9498-7A0D34AF8C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3C6C75-8E43-47B4-9498-7A0D34AF8C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF3C6C75-8E43-47B4-9498-7A0D34AF8C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569FC2CD-2BAC-4143-84B6-D819D9583355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569FC2CD-2BAC-4143-84B6-D819D9583355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569FC2CD-2BAC-4143-84B6-D819D9583355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569FC2CD-2BAC-4143-84B6-D819D9583355}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
